@@ -1,0 +1,41 @@
+<div class="content">
+    <div class="container">
+        <div class="d-grid gap-2 mx-auto col-2">
+            <button class="btn btn-success"><i class="fa fa-plus"></i></button>
+        </div>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>TYPE</th>
+                  <th>CATID</th>
+                  <th>DESCRIPTION</th>
+                  <th>PRICE</th>
+                  <th>FEATURED</th>
+                  <th>ACTIVE</th>
+                  <th>SZERKESZTÉS</th>
+                  <th>TÖRLÉS</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let product of list$ | async">
+                  <td> {{product.id}} </td>
+                  <td> {{product.name}} </td>
+                  <td> {{product.type}} </td>
+                  <td> {{product.catID}} </td>
+                  <td> {{product.description}} </td>
+                  <td> {{product.price}} </td>
+                  <td> {{product.featured}} </td>
+                  <td> {{product.active}} </td>
+                  <td> <button routerLink="/product-editor" class="btn btn-info"><i class="fa fa-pencil"></i></button> </td>
+                  <td> <button class="btn btn-danger"><i class="fa fa-trash"></i></button> </td>
+              </tr>
+            </tbody>
+      </table>
+    </div>
+  </div>
+
+
+    
+
