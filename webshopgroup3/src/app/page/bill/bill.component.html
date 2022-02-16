@@ -1,0 +1,32 @@
+<div class="content">
+    <div class="container">
+        <div class="d-grid gap-2 mx-auto col-2">
+            <button class="btn btn-success"><i class="fa fa-plus"></i></button>
+        </div>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>ORDERID</th>
+                  <th>AMOUNT</th>
+                  <th>STATUS</th>
+                  <th>SZERKESZTÉS</th>
+                  <th>TÖRLÉS</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let bill of list$ | async">
+                  <td> {{bill.id}} </td>
+                  <td> {{bill.orderID}} </td>
+                  <td> {{bill.amount}} </td>
+                  <td> {{bill.status}} </td>
+                  <td> <button routerLink="/bill-editor" class="btn btn-info"><i class="fa fa-pencil"></i></button> </td>
+                  <td> <button class="btn btn-danger"><i class="fa fa-trash"></i></button> </td>
+              </tr>
+            </tbody>
+      </table>
+    </div>
+  </div>
+
+
+    

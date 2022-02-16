@@ -1,0 +1,33 @@
+<div class="content">
+    <div class="container">
+        <div class="d-grid gap-2 mx-auto col-2">
+            <button class="btn btn-success"><i class="fa fa-plus"></i></button>
+        </div>
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>FIRSTNAME</th>
+                          <th>LASTNAME</th>
+                          <th>EMAIL</th>
+                          <th>ADDRESS</th>
+                          <th>ACTIVE</th>
+                          <th>SZERKESZTÉS</th>
+                          <th>TÖRLÉS</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let customer of list$ | async">
+                          <td> {{customer.id}} </td>
+                          <td> {{customer.firstName}} </td>
+                          <td> {{customer.lastName}} </td>
+                          <td> {{customer.email}} </td>
+                          <td> {{customer.address}} </td>
+                          <td> {{customer.active}} </td>
+                          <td> <button routerLink="/customer-editor" class="btn btn-info"><i class="fa fa-pencil"></i></button> </td>
+                          <td> <button class="btn btn-danger"><i class="fa fa-trash"></i></button> </td>
+                      </tr>
+                    </tbody>
+              </table>
+          </div>
+      </div>
