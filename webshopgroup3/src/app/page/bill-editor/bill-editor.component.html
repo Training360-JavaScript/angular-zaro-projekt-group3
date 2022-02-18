@@ -1,5 +1,5 @@
 <div class="row">
-    <div *ngIf="list$ | async as bill" class="col-6">
+    <div *ngIf="bill | async as bill" class="col-6">
         <form>
             <input [(ngModel)]="bill.id" type="hidden" name="id">
             <div class="form-group">

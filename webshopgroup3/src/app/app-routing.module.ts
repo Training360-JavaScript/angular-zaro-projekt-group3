@@ -36,7 +36,7 @@ const routes: Routes = [
     component: OrderEditorComponent
   },
   {
-    path: 'bill-editor/:id',
+    path: 'bill/editor/:id',
     component: BillEditorComponent
   },
   {

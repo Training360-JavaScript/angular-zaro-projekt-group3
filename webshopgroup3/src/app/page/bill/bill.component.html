@@ -20,7 +20,7 @@
                   <td> {{bill.orderID}} </td>
                   <td> {{bill.amount}} </td>
                   <td> {{bill.status}} </td>
-                  <td> <button routerLink="/bill-editor" class="btn btn-info"><i class="fa fa-pencil"></i></button> </td>
+                  <td> <button [routerLink]="['/bill-editor', bill.id]" class="btn btn-info"><i class="fa fa-pencil"></i></button> </td>
                   <td> <button class="btn btn-danger"><i class="fa fa-trash"></i></button> </td>
               </tr>
             </tbody>

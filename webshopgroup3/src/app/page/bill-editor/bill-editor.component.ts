@@ -16,10 +16,12 @@ export class BillEditorComponent implements OnInit {
   // apiUrl: string = environment.apiUrl;
   // entityName: string = 'bill';
 
-  list$: 
-  Observable<Bill> = this.activatedRoute.params.pipe(
-    switchMap(params => this.billService.get(params['id']))
-  )
+  // list$: 
+  // Observable<Bill> = this.activatedRoute.params.pipe(
+  //   switchMap(params => this.billService.get(params['id']))
+  // )
+
+  bill$: Observable<Bill> = this.activatedRoute.params.pipe(switchMap(params =>this.billService.get(params['id'])))
   
 
   constructor(
