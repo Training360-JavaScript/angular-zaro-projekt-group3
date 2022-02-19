@@ -4,19 +4,19 @@
             <input [(ngModel)]="bill.id" type="hidden" name="id">
             <div class="form-group">
                 <label for="id">ID</label>
-                <input [(ngModel)]="bill.id"  class="form-control" type="text" name="id" id="id">
+                <input required [(ngModel)]="bill.id"  class="form-control" type="text" name="id" id="id">
             </div>
             <div class="form-group">
                 <label for="orderId">OrderID</label>
-                <input [(ngModel)]="bill.orderID"  class="form-control" type="text" name="orderID" id="orderId">
+                <input required [(ngModel)]="bill.orderID"  class="form-control" type="text" name="orderID" id="orderId">
             </div>
             <div class="form-group">
                 <label for="amount">Amount</label>
-                <input [(ngModel)]="bill.amount"  class="form-control" type="text" name="amount" id="amount">
+                <input required [(ngModel)]="bill.amount"  class="form-control" type="text" name="amount" id="amount">
             </div>
             <div class="form-group">
                 <label for="status">Status</label>
-                <input [(ngModel)]="bill.status"  class="form-control" type="text" name="status" id="status">
+                <input required [(ngModel)]="bill.status"  class="form-control" type="text" name="status" id="status">
             </div>
         </form>
     </div>
